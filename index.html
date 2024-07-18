@@ -9,7 +9,10 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-image: url('https://img.freepik.com/vector-gratis/recibo-pago-estilo-flat_23-2147918645.jpg?w=740&t=st=1721261432~exp=1721262032~hmac=b615ca644213637832548027e362fa09a5b0fb5bb6ba0dea7079c5758df48276');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
         header {
             background-color: #333;
@@ -35,6 +38,12 @@
         }
         .content {
             padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con más transparencia */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            width: 80%;
+            text-align: justify; /* Justificar texto */
         }
         .gallery, .videos {
             display: flex;
@@ -51,10 +60,15 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .centered-paragraph {
-            text-align: center;
+            text-align: justify;
             margin: 20px 0;
             font-size: 18px;
             color: #333;
+            line-height: 1.6; /* Espaciado de línea adecuado */
+        }
+        .centered-paragraph strong {
+            font-weight: bold;
+            color: #4CAF50; /* Color verde */
         }
         footer {
             background-color: #333;
@@ -84,62 +98,105 @@
             border-radius: 5px;
             cursor: pointer;
             margin-top: 20px;
+            transition: background-color 0.3s ease;
         }
         .btn:hover {
             background-color: #45a049;
         }
+        .highlight {
+            color: #00008B; /* Color azul oscuro */
+        }
+        .title-animation {
+    animation: titleAnimation 2s ease-in-out infinite alternate;
+}
+
+@keyframes titleAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>FACTURAS ELECTRONICAS</h1>
-    </header>
-
-    <nav>
-        <a href="#fotos">Fotos</a>
-        <a href="#videos">Videos</a>
-        <a href="contactos.html">Contacto</a>
-    </nav>
-
-    <section id="main-text">
-        <h2>Bienvenido a tu plataforma de Facturación Electrónica</h2>
-        <p class="centered-paragraph">Aquí en Facturas Electrónicas, estamos comprometidos a ofrecerte una experiencia fluida y segura en la gestión de tus facturas. Con nuestra plataforma, puedes realizar tus facturas de forma rápida, eficiente y amigable con el medio ambiente.</p>
-        <p class="centered-paragraph">Nuestro objetivo es proporcionarte las herramientas necesarias para simplificar tu proceso de facturación, brindándote acceso a tus facturas en cualquier momento y lugar.</p>
-        <p class="centered-paragraph">Con Facturas Electrónicas, no solo estarás contribuyendo al cuidado del medio ambiente al reducir el uso de papel, sino que también contarás con los más altos estándares de seguridad para proteger tu información personal y empresarial.</p>
-        <p class="centered-paragraph">Estamos aquí para ayudarte en cada paso del camino. ¡Comienza hoy mismo y descubre la comodidad y eficiencia de la facturación electrónica!</p>
-    </section>
+<header>
     
+    <h1 class="title-animation">FACTURAS ELECTRONICAS</h1>
+
+</header>
+
+<nav>
+    <a href="#fotos">Fotos</a>
+    <a href="#videos">Videos</a>
+    <a href="contactos.html">Contacto</a>
+</nav>
+<section id="main-text">
+    <h2 class="highlight">Bienvenido a tu plataforma de Facturación Electrónica</h2>
 
     <div class="content">
-        <section id="fotos">
-            <h2> Realiza de manera segura tus procesos </h2>
-            <div class="gallery">
-                <img src="https://img.freepik.com/vector-gratis/composicion-isometrica-fintech-iconos-pictogramas-billeteras-efectivo-transacciones-pago-facturas-recibo-ilustracion-vectorial_1284-73753.jpg?w=740&t=st=1716677325~exp=1716677925~hmac=61c6799e66f6643b43656db579c26d19cffdb21f981b7bbdbce3a66482860c9f" alt="Foto 1">
-                <img src="https://img.freepik.com/foto-gratis/mujer-primer-plano-que-trabaja-computadora-portatil_23-2148411866.jpg?t=st=1716677271~exp=1716680871~hmac=182798b8d2ceb7e5067e9fe5b7b3dd32669f3d6010fb659ca8c2d37d56bddb08&w=360" alt="Foto 2">
-            </div>
-            <p class="centered-paragraph">Nos complace informarte que tu factura electrónica ya está disponible. 💼</p>
-            <p class="centered-paragraph">¿Por qué Facturas Electrónicas?🔒 <br>
-            Seguridad Garantizada: Protegemos tu información con los más altos estándares de seguridad.</p> 
-            <p class="centered-paragraph">🌍 Amigable con el Medio Ambiente: Contribuye a la reducción del uso de papel y ayuda a cuidar nuestro planeta.</p>
-            <p class="centered-paragraph">📲 Acceso Fácil y Rápido: Consulta y descarga tu factura en cualquier momento y desde cualquier lugar.</p>
-            <p class="centered-paragraph">💡 Eficiencia y Comodidad</p>
-            <!-- REALIZA TU FACTURA ELECTRONICA  -->
-            <a href="factura.html" class="btn">REALIZA TU FACTURA ELECTRONICA </a>
-
-            <section id="videos">
-                <h2>Videos Informativos de facturación</h2>
-                <div class="videos">
-                    <video controls>
-                        <source src="https://www.youtube.com/watch?v=PEgcOQ6blqk" type="video/mp4">
-                        
-                    
-                    </video>
-                </div>
-            </section>
+        <p class="centered-paragraph">Aquí en <strong>Facturas Electrónicas</strong>, estamos comprometidos a ofrecerte una experiencia fluida y segura en la gestión de tus facturas. Con nuestra plataforma, puedes realizar tus facturas de forma <strong>rápida, eficiente y amigable con el medio ambiente</strong>.</p>
+        <p class="centered-paragraph">Nuestro objetivo es proporcionarte las herramientas necesarias para simplificar tu proceso de facturación, brindándote acceso a tus facturas en cualquier momento y lugar.</p>
+        <p class="centered-paragraph">Con Facturas Electrónicas, no solo estarás contribuyendo al cuidado del medio ambiente al <strong> reducir el uso de papel</strong>, sino que también contarás con los más altos estándares de seguridad para proteger tu información personal y empresarial.</p>
+        <p class="centered-paragraph">Estamos aquí para ayudarte en cada paso del camino. ¡Comienza hoy mismo y descubre la <strong>comodidad y eficiencia de la facturación electrónica</strong>!</p>
+    </div>
+</section>
+<div class="content">
+    <section id="fotos">
+        <h2> Realiza de manera segura tus procesos </h2>
+        <div class="gallery">
+            <img src="https://img.freepik.com/vector-gratis/composicion-isometrica-fintech-iconos-pictogramas-billeteras-efectivo-transacciones-pago-facturas-recibo-ilustracion-vectorial_1284-73753.jpg?w=740&t=st=1716677325~exp=1716677925~hmac=61c6799e66f6643b43656db579c26d19cffdb21f981b7bbdbce3a66482860c9f" alt="Foto 1">
+            <img src="https://img.freepik.com/foto-gratis/mujer-primer-plano-que-trabaja-computadora-portatil_23-2148411866.jpg?t=st=1716677271~exp=1716680871~hmac=182798b8d2ceb7e5067e9fe5b7b3dd32669f3d6010fb659ca8c2d37d56bddb08&w=360" alt="Foto 2">
         </div>
-    
-    
-    </body>
-    </html>
-    
+        <p class="centered-paragraph">Nos complace informarte que tu factura electrónica ya está disponible. 💼</p>
+        <p class="centered-paragraph"><strong>¿Por qué Facturas Electrónicas?</strong></p>
+        <ul>
+            <li class="centered-paragraph">🔒 <strong>Seguridad Garantizada:</strong> Protegemos tu información con los más altos estándares de seguridad.</li>
+            <li class="centered-paragraph">🌍 <strong>Amigable con el Medio Ambiente:</strong> Contribuye a la reducción del uso de papel y ayuda a cuidar nuestro planeta.</li>
+            <li class="centered-paragraph">📲 <strong>Acceso Fácil y Rápido:</strong> Consulta y descarga tu factura en cualquier momento y desde cualquier lugar.</li>
+        </ul>
+        <a href="factura.html" class="btn">REALIZA TU FACTURA ELECTRONICA </a>
+    </section>
+    <section id="videos">
+        <h2>Videos Informativos de facturación</h2>
+        <div class="videos">
+            <video controls>
+                <source src="https://www.youtube.com/watch?v=PEgcOQ6blqk" type="video/mp4">
+                Tu navegador no admite el elemento <code>video</code>.
+            </video>
+        </div>
+    </section>
+</div>
+<div class="content">
+    <section id="features">
+        <h2 class="highlight">Beneficios de utilizar Facturas Electrónicas</h2>
+        <div class="feature-box">
+            <div class="feature">
+                <h3 class="feature-title">Ahorro de Tiempo</h3>
+                <p class="feature-description">Realiza tus facturas de manera rápida y eficiente, sin necesidad de trámites complicados.</p>
+            </div>
+            <div class="feature">
+                <h3 class="feature-title">Seguridad Garantizada</h3>
+                <p class="feature-description">Protegemos tu información con estándares de seguridad avanzados, manteniendo tus datos seguros en todo momento.</p>
+            </div>
+            <div class="feature">
+                <h3 class="feature-title">Accesibilidad</h3>
+                <p class="feature-description">Consulta y descarga tus facturas desde cualquier dispositivo y en cualquier momento, facilitando la gestión desde cualquier lugar.</p>
+            </div>
+            <div class="feature">
+                <h3 class="feature-title">Sostenibilidad</h3>
+                <p class="feature-description">Contribuye al medio ambiente reduciendo el uso de papel y promoviendo prácticas más sostenibles en tu empresa.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <a href="#">Términos de Servicio</a>
+    <a href="#">Política de Privacidad</a>
+    <a href="#">Contacto</a>
+</footer>
+</body>
+</html>

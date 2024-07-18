@@ -1,130 +1,163 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Factura electronica </title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .invoice {
-            width: 80%;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .invoice-header {
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title> Factura electrónica </title> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #aed6f1; /* Fondo azul claro */ 
+        } 
+        .invoice { 
+            width: 80%; 
+            margin: 50px auto; 
+            padding: 20px; 
+            background-color: #a9dfbf; /* Hoja principal verde claro */ 
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        } 
+        .invoice-header { 
+            text-align: center; 
+            margin-bottom: 20px; 
+            position: relative; 
+        } 
+        .invoice-header h1 { 
+            margin: 0; 
+        } 
+        .invoice-header img { 
+            width: 100%; 
+            max-width: 600px; 
+            height: auto; 
+            margin-bottom: 20px; 
+            border-radius: 5px; 
+        } 
+        .invoice-details, .invoice-items, .invoice-total { 
+            width: 100%; 
+            margin-bottom: 20px; 
+        } 
+        .invoice-details td, .invoice-items th, .invoice-items td, .invoice-total td { 
+            padding: 10px; 
+            border: 1px solid #ddd; 
+            border-collapse: collapse; 
+        } 
+        .invoice-details td { 
+            width: 50%; 
+        } 
+        .invoice-items th, .invoice-items td { 
+            text-align: left; 
+        } 
+        .invoice-items th { 
+            background-color: #f4f4f4; 
+        } 
+        .invoice-total { 
+            text-align: right; 
+        } 
+        .invoice-total td { 
+            padding-right: 20px; 
+        } 
+        .invoice-total .total-label { 
+            font-weight: bold; 
+        } 
+        .btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
             text-align: center;
-            margin-bottom: 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px;
+            transition: background-color 0.3s ease;
         }
-        .invoice-header h1 {
-            margin: 0;
-        }
-        .invoice-details, .invoice-items, .invoice-total {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-        .invoice-details td, .invoice-items th, .invoice-items td, .invoice-total td {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-collapse: collapse;
-        }
-        .invoice-details td {
-            width: 50%;
-        }
-        .invoice-items th, .invoice-items td {
-            text-align: left;
-        }
-        .invoice-items th {
-            background-color: #f4f4f4;
-        }
-        .invoice-total {
-            text-align: right;
-        }
-        .invoice-total td {
-            padding-right: 20px;
-        }
-        .invoice-total .total-label {
-            font-weight: bold;
-        }
-    </style>
-</head>
+    
+
+@keyframes titleAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+    </style> 
+</head> 
+<body> 
+    
+    <div class="invoice"> 
+        <div class="invoice-header"> 
+            <img src="https://st3.depositphotos.com/1010613/31725/i/600/depositphotos_317258848-stock-photo-close-businesswoman-using-digital-laptop.jpg" alt="Businesswoman using a digital laptop"> 
+            <h1>Factura electrónica </h1> 
+            <p>Fecha: 25/05/2024</p> 
+        </div> 
+        <table class="invoice-details"> 
+            <tr> 
+                <td> 
+                    <strong>De: Jhon Jimenez</strong><br> 
+                    Negocio: Comercial Reyes <br> 
+                    Dirección: Calle francisca chigua <br> 
+                    Teléfono: 0997123346<br> 
+                    Email: jhonjim5@gmail.com 
+                </td> 
+                <td> 
+                    <strong>Para: Jheny Renteria</strong><br> 
+                    Cliente ABC<br> 
+                    Dirección: Calle avenida baja<br> 
+                    Teléfono: 987-654-3210<br> 
+                    Email: jenyrent@gmail.com 
+                </td> 
+            </tr> 
+        </table> 
+        <table class="invoice-items"> 
+            <tr> 
+                <th>Descripción</th> 
+                <th>Cantidad</th> 
+                <th>Precio Unitario</th> 
+                <th>Total</th> 
+            </tr> 
+            <tr> 
+                <td>Producto 1</td> 
+                <td>2</td> 
+                <td>$10.00</td> 
+                <td>$20.00</td> 
+            </tr> 
+            <tr> 
+                <td>Servicio 1</td> 
+                <td>1</td> 
+                <td>$50.00</td> 
+                <td>$50.00</td> 
+            </tr> 
+            <tr> 
+                <td>Producto 2</td> 
+                <td>3</td> 
+                <td>$7.50</td> 
+                <td>$22.50</td> 
+            </tr> 
+        </table> 
+        <table class="invoice-total"> 
+            <tr> 
+                <td class="total-label">Subtotal:</td> 
+                <td>$92.50</td> 
+            </tr> 
+            <tr> 
+                <td class="total-label">Impuestos (10%):</td> 
+                <td>$9.25</td> 
+            </tr> 
+            <tr> 
+                <td class="total-label">Total:</td> 
+                <td>$101.75</td> 
+            </tr> 
+        </table> 
+    </div> 
+</body> 
 <body>
-
-    <div class="invoice">
-        <div class="invoice-header">
-            <h1>Factura</h1>
-            <p>Fecha: 25/05/2024</p>
-        </div>
-        
-        <table class="invoice-details">
-            <tr>
-                <td>
-                    <strong>De: Jhon Jimenez</strong><br>
-                    Negocio: Comercial Reyes <br>
-                    Dirección: Calle francisca chigua <br>
-                    Teléfono: 0997123346<br>
-                    Email: jhonjim5@gmail.com
-                </td>
-                <td>
-                    <strong>Para:  jheny Renteria </strong><br>
-                    Cliente ABC<br>
-                    Dirección: Calle avenida baja<br>
-                    Teléfono: 987-654-3210<br>
-                    Email: jenyrent@gmail.com
-                </td>
-            </tr>
-        </table>
-
-        <table class="invoice-items">
-            <tr>
-                <th>Descripción</th>
-                <th>Cantidad</th>
-                <th>Precio Unitario</th>
-                <th>Total</th>
-            </tr>
-            <tr>
-                <td>Producto 1</td>
-                <td>2</td>
-                <td>$10.00</td>
-                <td>$20.00</td>
-            </tr>
-            <tr>
-                <td>Servicio 1</td>
-                <td>1</td>
-                <td>$50.00</td>
-                <td>$50.00</td>
-            </tr>
-            <tr>
-                <td>Producto 2</td>
-                <td>3</td>
-                <td>$7.50</td>
-                <td>$22.50</td>
-            </tr>
-        </table>
-
-        <table class="invoice-total">
-            <tr>
-                <td class="total-label">Subtotal:</td>
-                <td>$92.50</td>
-            </tr>
-            <tr>
-                <td class="total-label">Impuestos (10%):</td>
-                <td>$9.25</td>
-            </tr>
-            <tr>
-                <td class="total-label">Total:</td>
-                <td>$101.75</td>
-            </tr>
-        </table>
-    </div>
-
+    
+    <a href="index.html" class="btn">Volver a la Página Principal</a>
 </body>
 </html>
